@@ -1,0 +1,65 @@
+/* css for foundations project: Landing Page  */
+
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;       
+    margin: 0px;     
+}
+
+.main-container {    /* will hold 6 sections including header/footer */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;               
+    width: 800px;
+    height: 100vh;       
+    background-color: #1F2937;
+    color: white;    
+    border: 2px solid red;
+}
+
+.section {     /* setting for all 6 sections  */
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;   
+}
+
+.header {
+    border: 2px solid green;
+}
+
+.section-1 {
+    border: 2px solid pink;
+}
+
+.section-2 {
+    border: 2px solid yellow;
+}
+
+.section-3 {
+    border: 2px solid blue;
+}
+
+.section-4 {
+    border: 2px solid violet;
+    
+}
+
+.footer {
+    border: 2px solid white;
+    font-size: x-small;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:auto;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
