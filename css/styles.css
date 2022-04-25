@@ -1,66 +1,57 @@
 /* css for foundations project: Landing Page  */
 
 body {
-    background-color: black;
+    background-color: #1F2937;
     font-family: 'Roboto', sans-serif; 
     overflow: hidden; 
     display: flex;
-    justify-content: center;       
+    justify-content: center;          
     margin: 0px;     
 }
 
-.main-container,
-.inner-main-container {
+
+.main-container {    /* will hold 6 sections including header/footer */      
+    width: 1000px;    
     display: flex;
     flex-direction: column;           
     height: 100vh;             
-    background-color: #1F2937;
-    color: white;        
-    
-
-}
-.main-container {    /* will hold 6 sections including header/footer */      
-    width: 1000px;    
-    align-items: center;
+    background-color: #1F2937;   /* header, footer, and section1 */
+    color: white;       
     border: 2px solid red;
 }
 
-.inner-main-container {      
-    width: 800px;      
-    border: 2px dotted fuchsia;
-}
-
 .header, 
-.footer {
-    height: 50px;
+.footer {    
     display: flex;
-    flex-direction: row;
-    /* justify-content: flex-end;     */
+    flex-direction: row; 
+    flex: 1;      
+    max-height: 50px;
 }
 
 .header {
     border: 2px solid green; 
-    justify-content: space-between;  /* two divs and separated with this */  
-    align-items: center;            /* moved text to center */
+    justify-content: space-between;  /* two divs separated with this */  
+    align-items: center;            /* moved text to center vertically*/    
 }
 
 .footer {
     border: 2px solid white;
     font-size: x-small;    
-    margin-top: auto;  /* locked footer to bottom */
+    margin-top: auto;               /* locked footer to bottom of page */
     justify-content: center;
     align-items: center;
 }
 
-.logo {
+.logo {    /* header logo */
     border: 2px solid orange;
     font-size: 24px;
     color: #f9faf8;
+    font-weight: bold;
 }
 
 .header-links {
     border: 2px solid lawngreen;
-    width: 400px;
+    width: 420px;
     font-size: 18px;
     color: #e5e7eb;
     display: flex;
@@ -70,14 +61,16 @@ body {
 .section-1 {
     border: 2px solid pink;
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 40px;    
 }
 
-.s1-container-1 {
+.s1-container-1 {     /* first container in section 1  */
     display: flex;
     flex-direction: column;
     justify-content: left;
-    flex: 50%;
+    flex: 50%;        
 }
 
 .s1-c1-header {
@@ -87,28 +80,81 @@ body {
 }
 
 .s1-c1-subtext {
-
+    font-size: 18px;
+    color: #e5e7eb;
+    padding-right: 30px;
+    padding-top: 8px;
 }
 
-.s1-container-2 {
+button {
+    background-color: #3882f6;
+    border-radius: 15px;
+    width: 90px;
+    height: 26px;
+}
+
+.s1-container-2 {     /* second container in section 1 - image placeholder */
     display: flex;
-    flex-direction: column;
-    justify-content: right;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column;
+    justify-content: right; */
     flex: 50%; 
-    background-color: lightgray;   
+    /* background-color: lightgray;    */
     border: 2px dashed purple;
+    background-color: rgb(123, 124, 131);
+}
+
+
+
+.section-1,
+.section-2,
+.section-3 {
+    height: 250px;
+}
+
+.section-2,
+.section-4 {
+    color: #000;
+    background-color: #fff;
 }
 
 .section-2 {
     border: 2px solid yellow;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .section-3 {
     border: 2px solid blue;
+    background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 85px;
+    color: #000;
+}
+
+.quote {
+    font-size: 36px;
+    font-style: italic;
+}
+
+.author {
+    font-size: 22px;
+    font-weight: bold;
+    padding-right: 45px;
+    align-self: flex-end;
 }
 
 .section-4 {
     border: 2px solid violet;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -122,3 +168,4 @@ a {
     text-decoration: none;
     color: white;
 }
+
