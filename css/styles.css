@@ -234,8 +234,7 @@ button {
     border: 2px solid #fff;
 }
 
-.footer {                 /* (child 5 of 5) footer */
-    border: 2px solid white;
+.footer {                 /* (child 5 of 5) footer */    
     font-size: x-small;    
     margin-top: auto;            
     justify-content: center;
