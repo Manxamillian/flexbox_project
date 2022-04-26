@@ -1,56 +1,53 @@
 /* css for foundations project: Landing Page  */
 
 body {
-    background-color: #1F2937;
-    font-family: 'Roboto', sans-serif; 
-    overflow: hidden; 
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;     
     display: flex;
     justify-content: center;          
     margin: 0px;     
 }
 
-
-.main-container {    /* will hold 6 sections including header/footer */      
-    width: 1000px;    
+.main-container {         /* parent flex container with 5 child boxes */      
+    width: 1200px;    
     display: flex;
     flex-direction: column;           
     height: 100vh;             
-    background-color: #1F2937;   /* header, footer, and section1 */
-    color: white;       
-    border: 2px solid red;
+    background-color: #1F2937;   
+    color: white;
 }
 
-.header, 
-.footer {    
+.container-2sections {    /* (child box 1 of 5) holds header and section-1 */
     display: flex;
-    flex-direction: row; 
-    flex: 1;      
-    max-height: 50px;
-}
-
-.header {
-    border: 2px solid green; 
-    justify-content: space-between;  /* two divs separated with this */  
-    align-items: center;            /* moved text to center vertically*/    
-}
-
-.footer {
-    border: 2px solid white;
-    font-size: x-small;    
-    margin-top: auto;               /* locked footer to bottom of page */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.logo {    /* header logo */
-    border: 2px solid orange;
+.header,   
+.footer {    
+    display: flex;
+    flex-direction: row; 
+    flex: 1;          
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #1F2937;
+}
+
+.header {
+    justify-content: space-between;    
+    align-items: center;               
+    width: 800px;
+}
+
+
+.logo {    
     font-size: 24px;
     color: #f9faf8;
     font-weight: bold;
 }
 
 .header-links {
-    border: 2px solid lawngreen;
     width: 420px;
     font-size: 18px;
     color: #e5e7eb;
@@ -58,15 +55,15 @@ body {
     justify-content: space-between;
 }
 
-.section-1 {
-    border: 2px solid pink;
+.section-1 {              /* hero section of awesome website */
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    margin-top: 40px;    
+    width: 800px;    
+    margin-top: 50px;   
+    margin-bottom: 50px;   
 }
 
-.s1-container-1 {     /* first container in section 1  */
+.s1-container-1 {         /* first container in section 1  */
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -84,34 +81,27 @@ body {
     color: #e5e7eb;
     padding-right: 30px;
     padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 button {
     background-color: #3882f6;
-    border-radius: 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
     width: 90px;
     height: 26px;
+    border: none;
 }
 
-.s1-container-2 {     /* second container in section 1 - image placeholder */
+.s1-container-2 {         /* second container in section 1 - image placeholder */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    /* flex-direction: column;
-    justify-content: right; */
-    flex: 50%; 
-    /* background-color: lightgray;    */
-    border: 2px dashed purple;
+    align-items: center;    
+    flex: 50%;
     background-color: rgb(123, 124, 131);
-}
-
-
-
-.section-1,
-.section-2,
-.section-3 {
-    height: 250px;
+    font-size: 10px;
 }
 
 .section-2,
@@ -120,27 +110,72 @@ button {
     background-color: #fff;
 }
 
-.section-2 {
-    border: 2px solid yellow;
-    justify-content: space-between;
-    align-items: center;
-    
+.section-2 {              /*  (child 2 of 5) boxes with subtext  */
+    display: flex;
+    flex-direction: column;    
+    align-items: center;   
 }
 
-.section-3 {
-    border: 2px solid blue;
+.s2-header-text {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+    padding: 20px;
+}
+
+.container-boxes-subtext {
+    display: flex;
+    flex-direction: column;
+}
+
+.s2-blue-box-subtext {
+    font-size: 11px;
+    flex-wrap: wrap;
+}
+
+.s2-blue-boxes,
+.s2-blue-box-subtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    padding-bottom: 5px;    
+}
+
+.blue-box {
+    box-sizing: border-box;    
+    border: 3px solid #3882f6;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;        
+}
+
+.subtext {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+}
+
+.section-3 {              /* (child 3 of 5) quote */
     background-color: #e5e7eb;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 85px;
+    padding: 50px 85px;
     color: #000;
 }
 
+.s3-container-main {
+    display: flex;
+    flex-direction: column;
+    width: 650px;   
+}
+
 .quote {
-    font-size: 36px;
+    font-size: 26px;
     font-style: italic;
+    padding: 8px;
 }
 
 .author {
@@ -150,21 +185,64 @@ button {
     align-self: flex-end;
 }
 
-.section-4 {
-    border: 2px solid violet;
-    height: 200px;
-    justify-content: space-between;
+.section-4 {              /* (child 4 of 5) call to action -*/        
+    display: flex;    
+    justify-content: center;
     align-items: center;
-    
+    background-color: #fff;
+    padding: 50px ;    
 }
 
-ul {
-    list-style: none;
+.s4-inner-blue-box {   
+    height: 100px;
+    width: 800px;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3882f6;
+    color: #fff;        
 }
 
-a {
+.s4-inner-container-1 {   /* holds s4-c1-header and subtext */
+    display: flex;
+    flex-direction: column;        
+}
+
+.s4-c1-header,
+.s4-c1-subtext {    
+    display: flex; 
+    align-items: center;     
+}
+
+.s4-c1-header {    
+    font-weight: bold;       
+}
+
+.s4-c1-subtext {     
+    font-size: 14px;   
+}
+
+.s4-inner-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.sign-up-btn-border button {
+    border: 2px solid #fff;
+}
+
+.footer {                 /* (child 5 of 5) footer */
+    border: 2px solid white;
+    font-size: x-small;    
+    margin-top: auto;            
+    justify-content: center;
+    align-items: center;
+}
+
+a {                       /* header links */
     text-decoration: none;
     color: white;
 }
